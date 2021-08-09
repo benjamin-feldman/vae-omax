@@ -1,9 +1,9 @@
-#VAE-Omax
+# VAE-Omax
 
 A new clustering model for SOMax, an application for improvisation in MaxMSP and Python.
 The current SOMax Core is using Self-Organizing Maps (SOMs). Here we replace the SOMs by Variational Auto-encoders, that have proven to be very effective on clustering problems.
 The implementation is done with Tensorflow.
-##Requirements :
+## Requirements :
 <ul>
 <li>Tensorflow 2.5.0</li>
 <li>music21</li>
@@ -11,7 +11,7 @@ The implementation is done with Tensorflow.
 <li>pandas</li>
 </ul>
 
-##How to train
+## How to train
 
 <ol>
 <li>Run "python createDataset" to generate the chroma dataset from <s>the midi files in data</s> the Bach chorales. TODO : leaky integrator on/off, artificial harmonics on/off</li>
