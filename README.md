@@ -16,18 +16,11 @@ This project contains the Python code I used to conduct my research during my in
 
 This project requires the following Python packages:
 
-- numpy
-- pandas
-- tensorflow
-- keras
-- music21
-
-You can install these packages using pip:
-
-```sh
-pip install numpy pandas tensorflow keras music21
-```
-
+- ``numpy``
+- ``pandas``
+- ``tensorflow``
+- ``keras``
+- ``music21``
 ## Usage
 ```sh
 python createDataset.py
