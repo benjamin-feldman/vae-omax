@@ -6,14 +6,11 @@ to another that can be much further. This is done by "traveling" in a latent spa
 ## Description
 
 This project contains the Python code I used to conduct my research during my internship at IRCAM in 2021. The code is divided into several scripts:
-
-- `config.py`: This script contains the configuration for the VAE.
-- `dataset.py`: This script contains functions to create a dataset from raw MIDI files.
-
 - `createDataset.py`: This script is used to create a dataset from raw MIDI files.
-- `models.py`: This script defines the architecture of the VAE.
+- `src/models.py`: This script defines the architecture of the VAE.
 - `train.py`: This script is responsible for training the VAE.
 - `evaluation.py`: This script contains functions to evaluate the performance of the VAE.
+- `src/utils.py`: various utilitary functions
 
 ## Requirements
 
