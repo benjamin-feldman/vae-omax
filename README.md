@@ -1,4 +1,4 @@
-# Bach Variational Autoencoder Project
+# VAE-OMAX
 
 [SOMax](https://forum.ircam.fr/projects/detail/somax-2/) is a software developed at IRCAM by G. Assayag, M. Chemillier and G. Bloch aiming to generate improvisation based on a given material. The main idea
 is to go navigate a musical corpus in a non linear way, jumping from one chord/note
