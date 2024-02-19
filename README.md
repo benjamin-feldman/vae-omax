@@ -1,21 +1,40 @@
-# VAE-Omax
+# Bach Variational Autoencoder Project
 
-A new clustering model for SOMax, an application for improvisation in MaxMSP and Python.
-The current SOMax Core is using Self-Organizing Maps (SOMs). Here we replace the SOMs by Variational Auto-encoders, that have proven to be very effective on clustering problems.
-The implementation is done with Tensorflow.
-## Requirements :
-<ul>
-<li>Tensorflow 2.5.0</li>
-<li>music21</li>
-<li>numpy</li>
-<li>pandas</li>
-</ul>
+[SOMax](https://forum.ircam.fr/projects/detail/somax-2/) is a software developed at IRCAM by G. Assayag, M. Chemillier and G. Bloch aiming to generate improvisation based on a given material. The main idea
+is to go navigate a musical corpus in a non linear way, jumping from one chord/note
+to another that can be much further. This is done by "traveling" in a latent space of musical chords. In SOMax 2, this is made using [self-organizing maps](https://en.wikipedia.org/wiki/Self-organizing_map) (hence the SOM in SOMax). During my internship at IRCAM, I explored other ways to build this latent space. This repository focuses on [Variational Autoencoders](https://en.wikipedia.org/wiki/Variational_autoencoder), and contains the code used to train and evaluate the VAE's latent space.
+## Description
 
-## How to train
+This project contains the Python code I used to conduct my research during my internship at IRCAM in 2021. The code is divided into several scripts:
 
-<ol>
-<li>Run "python createDataset" to generate the chroma dataset from <s>the midi files in data</s> the Bach chorales. TODO : leaky integrator on/off, artificial harmonics on/off</li>
-<li>Run "python train.py [--epochs EPOCHS] [--coldstart COLDSTART] [--beta BETA] [--batchsize BATCHSIZE]" to train.
-</li>
-<li>Run "python evaluation.py" to evaluate the latent space (work in progress)</li>
-</ol>
+- `config.py`: This script contains the configuration for the VAE.
+- `dataset.py`: This script contains functions to create a dataset from raw MIDI files.
+
+- `createDataset.py`: This script is used to create a dataset from raw MIDI files.
+- `models.py`: This script defines the architecture of the VAE.
+- `train.py`: This script is responsible for training the VAE.
+- `evaluation.py`: This script contains functions to evaluate the performance of the VAE.
+
+## Requirements
+
+This project requires the following Python packages:
+
+- numpy
+- pandas
+- tensorflow
+- keras
+- music21
+
+You can install these packages using pip:
+
+```sh
+pip install numpy pandas tensorflow keras music21
+```
+
+## Usage
+```sh
+python createDataset.py
+python train.py [--epochs EPOCHS] [--coldstart COLDSTART] [--beta BETA] [--batchsize BATCHSIZE]
+python evaluation.py
+```
+

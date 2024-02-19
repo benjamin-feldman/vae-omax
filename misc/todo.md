@@ -1,0 +1,2 @@
+- create config.yaml
+- intermediate plots of latent space

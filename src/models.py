@@ -7,6 +7,15 @@ class Sampling(layers.Layer):
     """Uses (z_mean, z_log_var) to sample z, the vector encoding a digit."""
 
     def call(self, inputs):
+        """
+        Samples z using the reparameterization trick.
+
+        Args:
+            inputs: A tuple containing z_mean and z_log_var.
+
+        Returns:
+            The sampled vector z.
+        """
         z_mean, z_log_var = inputs
         batch = tf.shape(z_mean)[0]
         dim = tf.shape(z_mean)[1]
@@ -26,6 +35,12 @@ class VAE(keras.Model):
         self.kl_loss_tracker = keras.metrics.Mean(name="kl_loss")
 
     def beta_update(self, beta):
+        """
+        Updates the value of beta.
+
+        Args:
+            beta: The new value of beta.
+        """
         self.beta = beta
 
     @property
@@ -37,6 +52,15 @@ class VAE(keras.Model):
         ]
 
     def train_step(self, data):
+        """
+        Performs a single training step.
+
+        Args:
+            data: The input data.
+
+        Returns:
+            A dictionary containing the loss and metric values.
+        """
         with tf.GradientTape() as tape:
             z_mean, z_log_var, z = self.encoder(data)
             reconstruction = self.decoder(z)
