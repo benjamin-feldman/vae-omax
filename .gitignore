@@ -1,5 +1,4 @@
 models/
-figures/
 training_1/
 *.ipynb
 *.pyc
