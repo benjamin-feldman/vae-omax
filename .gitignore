@@ -6,4 +6,3 @@ training_1/
 *.npy
 *.index
 report.md
-.gitignore
