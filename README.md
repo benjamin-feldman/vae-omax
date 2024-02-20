@@ -26,4 +26,7 @@ python createDataset.py
 python train.py [--epochs EPOCHS] [--coldstart COLDSTART] [--beta BETA] [--batchsize BATCHSIZE]
 python evaluation.py
 ```
+## 2D visualization of the latent space during training (after 100 epochs, for a VAE with a 6-dimensional latent space)
+
+![6D latent space](figures/example.png)
 
