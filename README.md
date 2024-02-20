@@ -1,5 +1,4 @@
-# VAE-OMAX
-
+# VAE-OMAX (2021)
 [SOMax](https://forum.ircam.fr/projects/detail/somax-2/) is a software developed at IRCAM by G. Assayag, M. Chemillier and G. Bloch aiming to generate improvisation based on a given material. The main idea
 is to go navigate a musical corpus in a non linear way, jumping from one chord/note
 to another that can be much further. This is done by "traveling" in a latent space of musical chords. In SOMax 2, this is made using [self-organizing maps](https://en.wikipedia.org/wiki/Self-organizing_map) (hence the SOM in SOMax). During my internship at IRCAM, I explored other ways to build this latent space. This repository focuses on [Variational Autoencoders](https://en.wikipedia.org/wiki/Variational_autoencoder), and contains the code used to train and evaluate the VAE's latent space.
